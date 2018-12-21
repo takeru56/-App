@@ -20,7 +20,7 @@ def hello():
     pi = pigpio.pi()
     pi.set_mode(gpio_pin, pigpio.OUTPUT)
     pi.hardware_PWM(gpio_pin, 200, 500000)
-    time.sleep(2)
+    time.sleep(0.05)
     pi.set_mode(gpio_pin, pigpio.INPUT)
     pi.stop()
 
