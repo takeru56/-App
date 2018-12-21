@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 });
 
 sendPress = () => {
-  fetch("http://raspberrypi.local:8080/on?num=1&duration1=50")
+  fetch("http://raspberrypi.local:8080/on?num=1&duration1=500")
     .then(function(response) {
       console.log(response);
       return response.json();
