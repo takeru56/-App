@@ -4,6 +4,7 @@ from bottle import route, run
 import simplejson as json
 from bottle import HTTPResponse
 import time
+from bottle import request, get
 import pigpio
 
 
@@ -15,12 +16,13 @@ def hello():
     print("@@@ Now, Outputting... @@@")
 
     gpio_pin = 19
+    duration1 = int(request.query.get('duration1')) / 1000
 
     # duration1
     pi = pigpio.pi()
     pi.set_mode(gpio_pin, pigpio.OUTPUT)
     pi.hardware_PWM(gpio_pin, 200, 500000)
-    time.sleep(0.05)
+    time.sleep(duration1)
     pi.set_mode(gpio_pin, pigpio.INPUT)
     pi.stop()
 
