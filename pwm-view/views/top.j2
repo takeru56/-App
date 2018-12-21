@@ -1,0 +1,134 @@
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <title>PWM Controller Pi</title>
+  <link rel="stylesheet" type="text/css" href="/assets/top.css">
+  <link rel="stylesheet" type="text/css" href="/assets/bulma.css">
+  
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="left">
+      <div class="image-div">
+        <img border="0" src="/assets/pulse.png" width="150" height="70" alt="pulse">
+      </div>
+      <div class="interval-sec">
+        <p class="sec-title">INTERVAL(ms)</p>
+        <div class="field">
+            <div class="control">
+              <input id="interval" type="text" class="input value1 is-danger">
+            </div>
+        </div>
+        <span>(ms)</span>
+      
+        <input type="range" class="slider1" style="width:90%" list="tickmarks">
+        <datalist id="tickmarks">
+          <option value="0" label="0">
+          <option value="10">
+          <option value="20">
+          <option value="30">
+          <option value="40">
+          <option value="50" label="50">
+          <option value="60">
+          <option value="70">
+          <option value="80">
+          <option value="90">
+          <option value="100" label="100">
+        </datalist>
+
+      </div>
+    </div>
+    <div class="right">
+      <div class="on1-sec">
+        <div class="tabs is-small">
+          <ul>
+            <li class="is-active tab_label on1"><a>Hz</a></li>
+            <li class="tab_label on1"><a>Duration</a></li>
+          </ul>
+        </div>
+        <div class="panel_area">
+          <div id="panel1" class="tab_panel is-active on1">
+            <a class="button is-danger is-outlined hz1">100Hz</a>
+            <a class="button is-danger hz1">200Hz</a>
+            <a class="button is-danger is-outlined hz1">300Hz</a>
+            <a class="button is-danger is-outlined hz1">400Hz</a>
+          </div>
+
+          <div id="panel2" class="tab_panel on1">
+            <div class="field">
+              <div class="control">
+                <input id="duration1" type="text" class="input value2 is-danger">
+              </div>
+            </div>
+            <span>(ms)</span>
+            <input type="range" class="slider2" style="width:90%" list="tickmarks2" max="2000" min="0" step="50">
+              <datalist id="tickmarks2">
+                <option value="0" label="0">
+                <option value="200">
+                <option value="400">
+                <option value="600">
+                <option value="800">
+                <option value="1000" label="1000">
+                <option value="1200">
+                <option value="1400">
+                <option value="1600">
+                <option value="1800">
+                <option value="2000" label="2000">
+              </datalist>
+          </div>
+      	</div>
+      </div>
+
+      <div class="on2-sec">
+        <div class="tabs is-small">
+          <ul>
+            <li class="is-active tab_label on2"><a>Hz</a></li>
+            <li class="tab_label on2"><a>Duration</a></li>
+          </ul>
+        </div>
+        <div class="panel_area">
+          <div id="panelA" class="tab_panel on2 is-active">
+            <a class="button is-danger is-outlined hz2">100Hz</a>
+            <a class="button is-danger hz2">200Hz</a>
+            <a class="button is-danger is-outlined hz2">300Hz</a>
+            <a class="button is-danger is-outlined hz2">400Hz</a>
+          </div>
+          <div id="panelB" class="tab_panel on2">
+            <div class="field">
+              <div class="control">
+                <input id="duration2" type="text" class="input value3 is-danger">
+              </div>
+            </div>
+            <span>(ms)</span>
+            <input type="range" class="slider3" style="width:90%" list="tickmarks3" max="2000" min="0" step="50">
+              <datalist id="tickmarks3">
+                <option value="0" label="0">
+                <option value="200">
+                <option value="400">
+                <option value="600">
+                <option value="800">
+                <option value="1000" label="1000">
+                <option value="1200">
+                <option value="1400">
+                <option value="1600">
+                <option value="1800">
+                <option value="2000" label="2000">
+              </datalist>
+          </div>
+      	</div>
+      </div>
+      <div class="button-div flexbox">
+        <a id="out-button" class="button button-out is-danger is-rounded">OUT!</a>
+      </div>
+      <form name="myform">
+        <input name="myfile" type="file" /><br/>
+        <textarea name="output" cols="80" rows="10"></textarea>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript" src="/assets/top.js"></script>
+</body>
+</html>
